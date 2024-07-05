@@ -5,5 +5,6 @@ public class Basico1 {
     // java lab01/Basico1.java
     public static void main(String[] args) {
         System.out.println("Olá, mundo!");
+        System.out.println("Olá, mundo!");
     }
 }

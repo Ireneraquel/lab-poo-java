@@ -49,6 +49,8 @@ public class Basico2 {
         boolean booleano2 = Boolean.FALSE;
         boolean booleano3 = Boolean.TRUE;
         var booleano4 = false;
+        
+    
 
     }
 
