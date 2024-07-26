@@ -1,6 +1,7 @@
 package lab04;
 
 import java.util.Scanner;
+import java.util.Random; 
 
 public class Jogo {
     // java lab04/Jogo.java
@@ -12,7 +13,9 @@ public class Jogo {
          */
 
         var sc = new Scanner(System.in);
-        var num = 15;
+        Random aleatorio = new Random();
+        int num = aleatorio.nextInt(100) + 1;
+        System.out.println("O sorteado está entre 1 e 100");
         var ten = 0;
         var usu_n = 0;
         System.out.println("Bem-vindo ao jogo!");
