@@ -7,15 +7,15 @@ public class Div {
     public static void main(String[] args) {  
         var sc = new Scanner(System.in);
         System.out.println("Digite um número:");
-        var n = sc.nextInt();
-        var div = 1;
+        var n1 = sc.nextInt();
+        var div = 0;
         var i = 1; 
 
-        while (i <= n)
-            if (n % i == 0){
-                i ++;
+        while (i <= n1)
+            if (n1 % i == 0){
+                div ++;
             } 
-         System.out.println("O número que divide " + n + " é: " + i);
-    
+    System.out.println("O número que divide " + n1 + " é: " + i);
+        
     }
 }

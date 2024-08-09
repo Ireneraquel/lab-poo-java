@@ -15,6 +15,6 @@ public class Div1 {
                 div ++;
             }
         
-    System.out.println("O número "+ n1 + "possui"+ div + "divisores");
+    System.out.println("O número "+ n1 + " possui "+ div + " divisores");
     }
 }
