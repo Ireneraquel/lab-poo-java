@@ -1,18 +1,53 @@
 package lab07;
 
-public class ContaCorrente{
-    String usuario;
-    String senha;
-    double saldo; 
-    String agencia;
+class ContaCorrente {
+    String numeroConta;
+    String titular;
+    double saldo;
 
-    // int, boolean, char, flout, double 
-
-    String realizarExtrato(){
-        return "Seu saldo é" + saldo;
+    ContaCorrente(String num, String ti , double s){
+        numeroConta = num;
+        titular = ti; 
+        saldo = s;
     }
     void depositar(double valor){
-        saldo += valor;
+        if (valor > 0 && saldo >= valor){
+            saldo += valor;
+        } else{
+            System.out.println("Valor invalido.");
+        }
     }
-    
+    void sacar(double valor){
+        if(valor > 0 && saldo >= valor){
+            saldo -= valor;
+        } else {
+            System.out.println("Valor invalido");
+        }
+    }
+
+    void transferir(ContaCorrente outraConta, double valor){
+        if (valor > 0 && saldo >= valor) {
+            sacar(valor);
+            outraConta.depositar(valor);
+        } else{
+            System.out.println("Valor invalido");
+        }
+    }
+
+
+    // Metodo
+    // Recuperar saldo 
+    double getSaldo(){
+        return saldo;
+    }
+
+    String getNumeroConta(){
+        return numeroConta;
+    }
+
+    void exibirInformacoes(){
+        System.out.println("Conta: " + numeroConta + 
+        "| Titular: " + titular + 
+        "| Saldo: " + saldo);
+    }
 }
